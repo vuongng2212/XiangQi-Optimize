@@ -593,7 +593,7 @@ namespace VinXiangQi
                 GameHandle = (IntPtr)1;
                 return;
             }
-            if (Settings.SelectedSolution != "" && Settings.SelectedSolution != "自定义方案")
+            if (Settings.SelectedSolution != "" && Settings.SelectedSolution != "Custom solutions")
             {
                 string key = Settings.SelectedSolution;
                 CurrentSolution = SolutionList[key];
@@ -641,12 +641,12 @@ namespace VinXiangQi
                 }
                 SaveSettings();
             }
-            else if(Settings.SelectedSolution != "自定义方案")
+            else if(Settings.SelectedSolution != "Custom solutions")
             {
-                if (Directory.Exists(@".\Solutions\自定义方案") && Directory.Exists(@".\Solutions\自定义方案\AutoClick"))
+                if (Directory.Exists(@".\Solutions\Custom solutions") && Directory.Exists(@".\Solutions\Custom solutions\AutoClick"))
                 {
                     AutoClickImageList.Clear();
-                    foreach (var image in Directory.GetFiles(@".\Solutions\自定义方案\AutoClick"))
+                    foreach (var image in Directory.GetFiles(@".\Solutions\Custom solutions\AutoClick"))
                     {
                         if (imgExtensions.Contains(image.Split('.').Last()))
                         {
