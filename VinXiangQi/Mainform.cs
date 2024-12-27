@@ -190,7 +190,7 @@ namespace VinXiangQi
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("加载开局库 " + file + " 失败：" + file + "\n" + ex.ToString());
+                        MessageBox.Show("Loading the open book " + file + " fail：" + file + "\n" + ex.ToString());
                     }
                 }
             }
@@ -224,7 +224,7 @@ namespace VinXiangQi
             string[] paramsKeys = "截图标题 截图类 点击标题 点击类".Split(' ');
             foreach (var folder in Directory.GetDirectories(@".\Solutions"))
             {
-                if (folder.EndsWith(@"\自定义方案")) continue;
+                if (folder.EndsWith(@"\Custom solutions")) continue;
                 string file = folder + @"\window.txt";
                 if (!File.Exists(file)) continue;
                 string[] lines = File.ReadAllLines(file);
@@ -237,7 +237,7 @@ namespace VinXiangQi
                         string[] args = line.Split('=');
                         if (args[0] != paramsKeys[i])
                         {
-                            MessageBox.Show("方案: " + file + " 格式错误: 第" + (i + 1) + "行应为" + paramsKeys[i]);
+                            MessageBox.Show("Plan: " + file + " Format Error: Chapter" + (i + 1) + "The behavior should be" + paramsKeys[i]);
                             break;
                         }
                         if (args[1] != "")
@@ -253,7 +253,7 @@ namespace VinXiangQi
                 }
                 else
                 {
-                    MessageBox.Show("方案: " + file + " 格式错误");
+                    MessageBox.Show("Plan: " + file + " Format Error");
                 }
             }
             comboBox_solution.Items.Clear();
@@ -410,7 +410,7 @@ namespace VinXiangQi
             if (Engine == null)
             {
                 DetectEnabled = false;
-                MessageBox.Show("引擎未加载！");
+                MessageBox.Show("Engine not loaded！");
                 ModeDisplay();
                 return;
             }
@@ -431,17 +431,17 @@ namespace VinXiangQi
         void DisplayStatus(string status)
         {
             Debug.WriteLine(status);
-            this.Invoke(new Action(() => label_status.Text = "识别状态: " + status));
+            this.Invoke(new Action(() => label_status.Text = "Identify status: " + status));
         }
 
         void ModeDisplay(string mode="")
         {
             if (string.IsNullOrEmpty(mode))
             {
-                mode = DetectEnabled ? "识别中" : "空闲";
+                mode = DetectEnabled ? "Identifying" : "Idle";
             }
             Debug.WriteLine(mode);
-            this.Invoke(new Action(() => label_detection_status.Text = "连线状态: " + mode));
+            this.Invoke(new Action(() => label_detection_status.Text = "Connection status: " + mode));
         }
 
         void MouseLeftClient_2Point(int x1, int y1, int x2, int y2)
@@ -495,9 +495,9 @@ namespace VinXiangQi
         {
             Task.Run(new Action(() =>
             {
-                DisplayStatus("请点击目标窗体并等待 准备获取游戏窗口句柄...2");
+                DisplayStatus("Please click the target window and wait for the game window handle to be obtained...2");
                 Thread.Sleep(1000);
-                DisplayStatus("请点击目标窗体并等待 准备获取游戏窗口句柄...1");
+                DisplayStatus("Please click the target window and wait for the game window handle to be obtained...1");
                 Thread.Sleep(1000);
                 GameHandle = ScreenshotHelper.GetForegroundWindow();
                 ClickHandle = (IntPtr)ScreenshotHelper.WindowFromPoint(Cursor.Position.X, Cursor.Position.Y);
@@ -518,7 +518,7 @@ namespace VinXiangQi
                 this.Invoke(new Action(() =>
                 {
                     comboBox_solution.SelectedItem = null;
-                    comboBox_solution.Text = "自定义方案";
+                    comboBox_solution.Text = "Custom solutions";
                 }));
             }));
         }
@@ -527,7 +527,7 @@ namespace VinXiangQi
         {
             try
             {
-                if (Settings.SelectedSolution == "剪切板")
+                if (Settings.SelectedSolution == "Clipboard")
                 {
                     if (Clipboard.ContainsImage())
                     {
@@ -542,7 +542,7 @@ namespace VinXiangQi
                         Debug.WriteLine("NO Clipboard Image");
                         Bitmap no_image = new Bitmap(150, 100);
                         Graphics gdi = Graphics.FromImage(no_image);
-                        gdi.DrawString("剪切板中没有图片", this.Font, Brushes.Black, 0, 40);
+                        gdi.DrawString("No image in the clipboard", this.Font, Brushes.Black, 0, 40);
                         gdi.Dispose();
                         return no_image;
                     }
@@ -587,7 +587,7 @@ namespace VinXiangQi
         void LoadCurrentSolution()
         {
             string[] imgExtensions = new string[] { "png", "jpg", "bmp", "jpeg" };
-            if (Settings.SelectedSolution == "剪切板")
+            if (Settings.SelectedSolution == "Clipboard")
             {
                 ClickHandle = (IntPtr)1;
                 GameHandle = (IntPtr)1;
@@ -905,9 +905,9 @@ namespace VinXiangQi
             }
             else
             {
-                if (comboBox_solution.Text == "自定义方案")
+                if (comboBox_solution.Text == "Custom solutions")
                 {
-                    Settings.SelectedSolution = "自定义方案";
+                    Settings.SelectedSolution = "Custom solutions";
                     SaveSettings();
                     LoadCurrentSolution();
                 }                    
@@ -918,7 +918,7 @@ namespace VinXiangQi
         {
             string fen = Utils.BoardToFen(CurrentBoard,RedSide ? "w" : "b",RedSide ? "w" : "b");
             Clipboard.SetText(fen);
-            MessageBox.Show("局面: \n" + fen + "\n 已经复制到剪贴板");
+            MessageBox.Show("局面: \n" + fen + "\n Copied to clipboard");
         }
 
         private void checkBox_debug_CheckedChanged(object sender, EventArgs e)
@@ -1076,14 +1076,14 @@ namespace VinXiangQi
 
         private void button_clipboard_solution_Click(object sender, EventArgs e)
         {
-            if (SolutionList.ContainsKey("剪切板"))
+            if (SolutionList.ContainsKey("Clipboard"))
             {
-                Settings.SelectedSolution = "剪切板";
+                Settings.SelectedSolution = "Clipboard";
             }
             else
             {
-                SolutionList.Add("剪切板", new Solution("", "", "", ""));
-                Settings.SelectedSolution = "剪切板";
+                SolutionList.Add("Clipboard", new Solution("", "", "", ""));
+                Settings.SelectedSolution = "Clipboard";
             }
         }
 
