@@ -254,7 +254,7 @@ namespace VinXiangQi
                 {
                     if (action.Length == 1)
                     {
-                        Thread.Sleep(200);
+                        Thread.Sleep(300);
                     }
                     else
                     {

@@ -466,7 +466,7 @@ namespace VinXiangQi
             else
             {
                 MouseHelper.MouseLeftClick(ClickHandle, x1, y1);
-                Thread.Sleep(300);
+                Thread.Sleep(400);
                 MouseHelper.MouseLeftClick(ClickHandle, x2, y2);
             }
         }

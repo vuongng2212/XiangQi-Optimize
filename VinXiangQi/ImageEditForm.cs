@@ -51,7 +51,15 @@ namespace VinXiangQi
 
         void InitImage()
         {
-            DisplayBitmap = (Bitmap)RawImage.Clone();
+            using (Bitmap tempBitmap = new Bitmap(RawImage.Width, RawImage.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb))
+            {
+                using (Graphics g = Graphics.FromImage(tempBitmap))
+                {
+                    g.DrawImage(RawImage, 0, 0);
+                }
+                DisplayBitmap = (Bitmap)tempBitmap.Clone();
+            }
+            
             DisplayGDI = Graphics.FromImage(DisplayBitmap);
             pictureBox.Image = DisplayBitmap;
             ActionState = State.Idle;
