@@ -41,7 +41,7 @@ namespace VinXiangQi
                 path = path.Replace(Environment.CurrentDirectory, ".");
                 if (!File.Exists(path))
                 {
-                    MessageBox.Show($"{path} 引擎文件不存在！");
+                    MessageBox.Show($"{path} The engine file does not exist!");
                     return;
                 }
                 EngineSettings settings = new EngineSettings();
@@ -51,7 +51,7 @@ namespace VinXiangQi
                 string[] fileNameParts = settings.ExePath.Split('\\').Last().Split('.');
                 if (fileNameParts[fileNameParts.Length - 1] != "exe")
                 {
-                    MessageBox.Show("不是合法的引擎文件！");
+                    MessageBox.Show("Not a legitimate engine file！");
                 }
                 string fileName = string.Join(".", fileNameParts.Take(fileNameParts.Length - 1));
                 string key = fileName;
@@ -110,12 +110,12 @@ namespace VinXiangQi
                 if (!engine.Initialized) return;
                 EngineSettingsForm engineSettingsForm = new EngineSettingsForm(engine, settings);
                 engineSettingsForm.StartPosition = FormStartPosition.CenterParent;
-                engineSettingsForm.Text = settings.ExePath + " 引擎设置";
+                engineSettingsForm.Text = settings.ExePath + " Engine Settings";
                 engineSettingsForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show(this, "请先选中一个引擎");
+                MessageBox.Show(this, "Please select an engine first!");
             }
         }
 
@@ -164,7 +164,7 @@ namespace VinXiangQi
             }
             else
             {
-                MessageBox.Show(this, "请先选中一个引擎");
+                MessageBox.Show(this, "Please select an engine first!");
             }
         }
     }

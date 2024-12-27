@@ -689,7 +689,7 @@
             this.button_clipboard_solution.Size = new System.Drawing.Size(118, 24);
             this.button_clipboard_solution.TabIndex = 29;
             this.button_clipboard_solution.TabStop = false;
-            this.button_clipboard_solution.Text = "Reconize clipboard pic";
+            this.button_clipboard_solution.Text = "Recognize clipboard pic";
             this.button_clipboard_solution.UseVisualStyleBackColor = true;
             this.button_clipboard_solution.Click += new System.EventHandler(this.button_clipboard_solution_Click);
             // 

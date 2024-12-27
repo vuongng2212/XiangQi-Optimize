@@ -41,31 +41,34 @@
             // 
             // button_add_engine
             // 
-            this.button_add_engine.Location = new System.Drawing.Point(12, 9);
+            this.button_add_engine.Location = new System.Drawing.Point(9, 8);
+            this.button_add_engine.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button_add_engine.Name = "button_add_engine";
-            this.button_add_engine.Size = new System.Drawing.Size(100, 34);
+            this.button_add_engine.Size = new System.Drawing.Size(75, 29);
             this.button_add_engine.TabIndex = 1;
-            this.button_add_engine.Text = "添加引擎";
+            this.button_add_engine.Text = "Add engine";
             this.button_add_engine.UseVisualStyleBackColor = true;
             this.button_add_engine.Click += new System.EventHandler(this.button_add_engine_Click);
             // 
             // button_delete_engine
             // 
-            this.button_delete_engine.Location = new System.Drawing.Point(118, 9);
+            this.button_delete_engine.Location = new System.Drawing.Point(88, 8);
+            this.button_delete_engine.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button_delete_engine.Name = "button_delete_engine";
-            this.button_delete_engine.Size = new System.Drawing.Size(100, 34);
+            this.button_delete_engine.Size = new System.Drawing.Size(75, 29);
             this.button_delete_engine.TabIndex = 2;
-            this.button_delete_engine.Text = "删除引擎";
+            this.button_delete_engine.Text = "Del engine";
             this.button_delete_engine.UseVisualStyleBackColor = true;
             this.button_delete_engine.Click += new System.EventHandler(this.button_delete_engine_Click);
             // 
             // button_engine_settings
             // 
-            this.button_engine_settings.Location = new System.Drawing.Point(224, 9);
+            this.button_engine_settings.Location = new System.Drawing.Point(168, 8);
+            this.button_engine_settings.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button_engine_settings.Name = "button_engine_settings";
-            this.button_engine_settings.Size = new System.Drawing.Size(100, 34);
+            this.button_engine_settings.Size = new System.Drawing.Size(89, 29);
             this.button_engine_settings.TabIndex = 3;
-            this.button_engine_settings.Text = "引擎设置";
+            this.button_engine_settings.Text = "Engine settings";
             this.button_engine_settings.UseVisualStyleBackColor = true;
             this.button_engine_settings.Click += new System.EventHandler(this.button_engine_settings_Click);
             // 
@@ -81,9 +84,10 @@
             this.columnHeader_path});
             this.listView_engine_list.FullRowSelect = true;
             this.listView_engine_list.HideSelection = false;
-            this.listView_engine_list.Location = new System.Drawing.Point(12, 52);
+            this.listView_engine_list.Location = new System.Drawing.Point(9, 45);
+            this.listView_engine_list.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.listView_engine_list.Name = "listView_engine_list";
-            this.listView_engine_list.Size = new System.Drawing.Size(675, 315);
+            this.listView_engine_list.Size = new System.Drawing.Size(507, 274);
             this.listView_engine_list.TabIndex = 5;
             this.listView_engine_list.UseCompatibleStateImageBehavior = false;
             this.listView_engine_list.View = System.Windows.Forms.View.Details;
@@ -106,14 +110,15 @@
             // 
             // EngineManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 379);
+            this.ClientSize = new System.Drawing.Size(524, 328);
             this.Controls.Add(this.button_add_engine);
             this.Controls.Add(this.listView_engine_list);
             this.Controls.Add(this.button_engine_settings);
             this.Controls.Add(this.button_delete_engine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "EngineManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "引擎管理";
