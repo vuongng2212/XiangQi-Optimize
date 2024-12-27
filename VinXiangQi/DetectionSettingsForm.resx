@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Please do not adjust the recognition interval at will. 
+If the recognition interval is too small, it may lead to the 
+recognition of the wrong intermediate situation. 
+If the game connected is a game with a short animation 
+time such as JJ Chess, the number of recognition 
+confirmations can be adjusted to .
+ If the game connected is a game with a long animation 
+time such as Tiantian Chess, the number of recognition 
+confirmations must be at least twice.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
