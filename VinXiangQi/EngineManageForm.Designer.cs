@@ -95,17 +95,17 @@
             // 
             // columnHeader_name
             // 
-            this.columnHeader_name.Text = "名称";
+            this.columnHeader_name.Text = "Name";
             this.columnHeader_name.Width = 150;
             // 
             // columnHeader_author
             // 
-            this.columnHeader_author.Text = "作者";
+            this.columnHeader_author.Text = "Author";
             this.columnHeader_author.Width = 140;
             // 
             // columnHeader_path
             // 
-            this.columnHeader_path.Text = "路径";
+            this.columnHeader_path.Text = "Path";
             this.columnHeader_path.Width = 320;
             // 
             // EngineManageForm

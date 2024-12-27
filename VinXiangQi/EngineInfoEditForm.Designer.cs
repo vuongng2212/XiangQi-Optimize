@@ -41,77 +41,85 @@
             // 
             // textBox_engine_name
             // 
-            this.textBox_engine_name.Location = new System.Drawing.Point(81, 53);
+            this.textBox_engine_name.Location = new System.Drawing.Point(61, 46);
+            this.textBox_engine_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox_engine_name.Name = "textBox_engine_name";
-            this.textBox_engine_name.Size = new System.Drawing.Size(242, 25);
+            this.textBox_engine_name.Size = new System.Drawing.Size(182, 20);
             this.textBox_engine_name.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 56);
+            this.label1.Location = new System.Drawing.Point(17, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "名称：";
+            this.label1.Text = "Name：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 97);
+            this.label2.Location = new System.Drawing.Point(17, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "作者：";
+            this.label2.Text = "Author：";
             // 
             // textBox_engine_author
             // 
-            this.textBox_engine_author.Location = new System.Drawing.Point(81, 94);
+            this.textBox_engine_author.Location = new System.Drawing.Point(61, 81);
+            this.textBox_engine_author.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox_engine_author.Name = "textBox_engine_author";
-            this.textBox_engine_author.Size = new System.Drawing.Size(242, 25);
+            this.textBox_engine_author.Size = new System.Drawing.Size(182, 20);
             this.textBox_engine_author.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 139);
+            this.label3.Location = new System.Drawing.Point(17, 120);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "路径：";
+            this.label3.Text = "Path：";
             // 
             // textBox_engine_path
             // 
-            this.textBox_engine_path.Location = new System.Drawing.Point(81, 136);
+            this.textBox_engine_path.Location = new System.Drawing.Point(61, 118);
+            this.textBox_engine_path.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox_engine_path.Name = "textBox_engine_path";
-            this.textBox_engine_path.Size = new System.Drawing.Size(242, 25);
+            this.textBox_engine_path.Size = new System.Drawing.Size(182, 20);
             this.textBox_engine_path.TabIndex = 4;
             // 
             // button_confirm
             // 
-            this.button_confirm.Location = new System.Drawing.Point(70, 223);
+            this.button_confirm.Location = new System.Drawing.Point(52, 193);
+            this.button_confirm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button_confirm.Name = "button_confirm";
-            this.button_confirm.Size = new System.Drawing.Size(96, 30);
+            this.button_confirm.Size = new System.Drawing.Size(72, 26);
             this.button_confirm.TabIndex = 6;
-            this.button_confirm.Text = "确定";
+            this.button_confirm.Text = "Done";
             this.button_confirm.UseVisualStyleBackColor = true;
             this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // button_cancel
             // 
-            this.button_cancel.Location = new System.Drawing.Point(191, 223);
+            this.button_cancel.Location = new System.Drawing.Point(143, 193);
+            this.button_cancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(96, 30);
+            this.button_cancel.Size = new System.Drawing.Size(72, 26);
             this.button_cancel.TabIndex = 7;
-            this.button_cancel.Text = "取消";
+            this.button_cancel.Text = "Cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // EngineInfoEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 303);
+            this.ClientSize = new System.Drawing.Size(270, 263);
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.label3);
@@ -121,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_engine_name);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "EngineInfoEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "引擎信息";
